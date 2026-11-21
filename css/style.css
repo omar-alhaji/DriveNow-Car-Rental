@@ -1,0 +1,324 @@
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* Navbar */
+header {
+    background-color: #101828;
+    color: white;
+    padding: 18px 8%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #3b82f6;
+    font-size: 28px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+.nav-button {
+    background-color: #2563eb;
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+
+/* Hero */
+.hero {
+    min-height: 450px;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.main-button {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 13px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Sections */
+section {
+    padding: 60px 8%;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #101828;
+}
+
+/* Search */
+.search-form {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+input,
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.search-form input,
+.search-form select {
+    flex: 1;
+    min-width: 180px;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover:not(:disabled) {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+/* Cars */
+.car-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.car-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.car-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.car-info {
+    padding: 20px;
+}
+
+.car-info h3 {
+    margin-bottom: 12px;
+    color: #101828;
+}
+
+.car-info p {
+    margin-bottom: 8px;
+}
+
+.car-info button {
+    width: 100%;
+    margin-top: 12px;
+}
+
+/* Booking Form */
+#booking-form {
+    max-width: 550px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+#booking-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+#booking-form input,
+#booking-form select {
+    width: 100%;
+}
+
+#booking-form button {
+    width: 100%;
+    margin-top: 25px;
+}
+
+#booking-message {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Booking History */
+#booking-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.booking-card {
+    background-color: white;
+    padding: 22px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.booking-card h3 {
+    margin-bottom: 12px;
+}
+
+.booking-card p {
+    margin-bottom: 8px;
+}
+
+.booking-card button {
+    background-color: #dc2626;
+    margin-top: 12px;
+}
+
+.booking-card button:hover {
+    background-color: #b91c1c;
+}
+
+/* About and Contact */
+#about,
+#contact {
+    text-align: center;
+}
+
+#about p,
+#contact p {
+    line-height: 1.8;
+    max-width: 750px;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #101828;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* Focus */
+input:focus,
+select:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 750px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 45px 5%;
+    }
+
+    #booking-form {
+        padding: 20px;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form input,
+    .search-form select,
+    .search-form button {
+        width: 100%;
+    }
+}

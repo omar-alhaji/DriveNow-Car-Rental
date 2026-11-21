@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveNow - Car Rental</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">DriveNow</h1>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cars">Our Cars</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#booking" class="nav-button">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Find Your Perfect Ride</h2>
+            <p>Discover the best cars at affordable prices.</p>
+            <a href="#cars" class="main-button">Explore Cars</a>
+        </div>
+    </section>
+
+    <!-- Search -->
+    <section id="search">
+        <h2>Find Your Car</h2>
+
+        <form id="search-form" class="search-form">
+
+            <input
+                type="text"
+                id="search-name"
+                placeholder="Search by car name">
+
+            <select id="category">
+                <option value="">All Categories</option>
+                <option value="Economy">Economy</option>
+                <option value="Luxury">Luxury</option>
+                <option value="SUV">SUV</option>
+            </select>
+
+            <input
+                type="number"
+                id="max-price"
+                placeholder="Maximum price per day"
+                min="0">
+
+            <button type="submit">Search</button>
+
+        </form>
+    </section>
+
+    <!-- Cars -->
+    <section id="cars">
+        <h2>Our Cars</h2>
+
+        <div id="car-container" class="car-container">
+            <!-- Cars displayed by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="booking">
+        <h2>Book Your Car</h2>
+
+        <form id="booking-form">
+
+            <label for="customer-name">Full Name</label>
+            <input type="text" id="customer-name" required>
+
+            <label for="customer-phone">Phone Number</label>
+            <input type="tel" id="customer-phone" required>
+
+            <label for="booking-car">Select Car</label>
+            <select id="booking-car" required>
+                <option value="">Choose a car</option>
+            </select>
+
+            <label for="pickup-date">Pickup Date</label>
+            <input type="date" id="pickup-date" required>
+
+            <label for="return-date">Return Date</label>
+            <input type="date" id="return-date" required>
+
+            <label for="rental-days">Rental Duration</label>
+            <input type="text" id="rental-days" readonly>
+
+            <label for="total-price">Total Price ($)</label>
+            <input type="text" id="total-price" readonly>
+
+            <button type="submit">Confirm Booking</button>
+
+            <p id="booking-message"></p>
+
+        </form>
+    </section>
+
+    <!-- Booking History -->
+    <section id="history">
+        <h2>Booking History</h2>
+
+        <div id="booking-list">
+            <!-- Bookings displayed by JavaScript -->
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About DriveNow</h2>
+
+        <p>
+            DriveNow is a car rental platform that makes renting
+            a car simple and convenient. Choose your favorite car,
+            select your dates, and book your ride.
+        </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+
+        <p>Email: contact@drivenow.com</p>
+        <p>Phone: +961 70 000 000</p>
+        <p>Location: Lebanon</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 DriveNow. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
