@@ -96,6 +96,7 @@ document.getElementById("search-form").addEventListener("submit", function(event
 
     let name = document.getElementById("search-name").value.toLowerCase();
     let category = document.getElementById("category").value;
+    let fuel = document.getElementById("fuel").value;
     let maxPrice = document.getElementById("max-price").value;
 
     let filteredCars = cars.filter(function(car) {
@@ -103,6 +104,7 @@ document.getElementById("search-form").addEventListener("submit", function(event
         return (
             car.name.toLowerCase().includes(name) &&
             (category === "" || car.category === category) &&
+            (fuel === "" || car.fuel === fuel) &&
             (maxPrice === "" || car.price <= Number(maxPrice))
         );
 
